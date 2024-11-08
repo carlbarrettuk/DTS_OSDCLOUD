@@ -1,4 +1,4 @@
-﻿# Override Global Variables
+# Override Global Variables
 
 #Variables to define the Windows OS / Edition to be applied during OSDCloud
 #$OSName = 'Windows 11 23H2 x64' < commented out 23/08/2024 as we may need W10 in niche cases
@@ -54,7 +54,7 @@ Type-Write $loadingMessage1 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the two lines
 Type-Write $loadingMessage2 $loadingColor $delay
 write-host ""
-Write-Host "Version:: 0.10" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 0.11" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
