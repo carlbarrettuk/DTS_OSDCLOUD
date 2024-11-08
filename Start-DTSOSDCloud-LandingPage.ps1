@@ -54,14 +54,15 @@ Type-Write $loadingMessage1 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the two lines
 Type-Write $loadingMessage2 $loadingColor $delay
 write-host ""
-Write-Host "Version:: 0.11" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 0.12" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 11 | Enterprise | En-gb" -ForegroundColor White
 Write-Host "2: Windows 10 | Enterprise | En-gb" -ForegroundColor White
-Write-Host "3: Exit`n" -ForegroundColor Red
+Write-Host "3: Windows 11 24H2 | Enterprise | En-gb" -ForegroundColor White
+Write-Host "4: Exit`n" -ForegroundColor Red
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -72,7 +73,8 @@ switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '3' { Exit		}
+    '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '4' { Exit		}
 }
 
 wpeutil reboot
