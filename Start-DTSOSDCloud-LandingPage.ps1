@@ -35,7 +35,7 @@ $loadingColor = "Yellow"
 Write-Host $banner -ForegroundColor $loadingColor
 
 $loadingMessage1 = "Created by Dave Segura (@SeguraOSD)"
-$loadingMessage2 = "Utilised by Centrica DTS"
+$loadingMessage2 = "Utilised by DTS"
 $loadingColor = "White"
 $delay = 50  # Delay between each character in milliseconds
 
@@ -60,9 +60,7 @@ Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 11 | Enterprise | En-gb" -ForegroundColor White
-Write-Host "2: Windows 10 | Enterprise | En-gb" -ForegroundColor White
-Write-Host "3: Windows 11 24H2 | Enterprise | En-gb" -ForegroundColor White
-Write-Host "4: Exit`n" -ForegroundColor Red
+Write-Host "3: Exit`n" -ForegroundColor Red
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -72,9 +70,7 @@ Write-Host ".................................................." -ForegroundColor
 switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '2' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '4' { Exit		}
+    '3' { Exit		}
 }
 
 wpeutil reboot
