@@ -61,6 +61,8 @@ Write-Host "===================== Main Menu =======================" -Foreground
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 11 | Enterprise | En-gb" -ForegroundColor White
 Write-Host "2: Exit`n" -ForegroundColor Red
+Write-Host "3: Windows 11 | Professional | En-gb" -ForegroundColor White
+Write-Host "4: Windows 10 | Professional | En-gb" -ForegroundColor White
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -71,6 +73,8 @@ switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Exit		}
+    '3' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation Pro -OSLanguage $OSLanguage }
+    '4' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition $OSEdition -OSActivation Pro -OSLanguage $OSLanguage }
 }
 
 wpeutil reboot
