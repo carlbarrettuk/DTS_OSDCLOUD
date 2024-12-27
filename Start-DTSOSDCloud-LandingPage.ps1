@@ -73,8 +73,8 @@ switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Exit		}
-    '3' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation Pro -OSLanguage $OSLanguage }
-    '4' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition $OSEdition -OSActivation Pro -OSLanguage $OSLanguage }
+    '3' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '4' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
 }
 
 wpeutil reboot
