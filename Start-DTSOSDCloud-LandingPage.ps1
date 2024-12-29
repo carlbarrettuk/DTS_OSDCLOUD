@@ -35,7 +35,8 @@ $loadingColor = "Yellow"
 Write-Host $banner -ForegroundColor $loadingColor
 
 $loadingMessage1 = "Created by Dave Segura (@SeguraOSD)"
-$loadingMessage2 = "Utilised by DTS"
+$loadingMessage2 = "You may now remove your USB key"
+$loadingMessage3 = "NOTE: OSDCloud has not been tested with Field Devices such as Getac or Panasonic Tablets"
 $loadingColor = "White"
 $delay = 50  # Delay between each character in milliseconds
 
@@ -54,15 +55,13 @@ Type-Write $loadingMessage1 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the two lines
 Type-Write $loadingMessage2 $loadingColor $delay
 write-host ""
-Write-Host "Version:: 0.12" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 0.14" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 11 | Enterprise | En-gb" -ForegroundColor White
 Write-Host "2: Exit`n" -ForegroundColor Red
-Write-Host "3: Windows 11 | Professional | En-gb" -ForegroundColor White
-Write-Host "4: Windows 10 | Professional | En-gb" -ForegroundColor White
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -73,8 +72,6 @@ switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Exit		}
-    '3' { Start-OSDCloud -OSName "Windows 11 23H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '4' { Start-OSDCloud -OSName "Windows 10 22H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
 }
 
 wpeutil reboot
