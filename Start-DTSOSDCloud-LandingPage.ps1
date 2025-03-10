@@ -52,10 +52,12 @@ function Type-Write ($message, $color, $delay) {
 # Type out the messages with a delay
 Write-Host ""
 Type-Write $loadingMessage1 $loadingColor $delay
-Start-Sleep -Seconds 1  # Optional pause between the two lines
+Start-Sleep -Seconds 1  # Optional pause between the lines
 Type-Write $loadingMessage2 $loadingColor $delay
+Start-Sleep -Seconds 1  # Optional pause between the lines
+Type-Write $loadingMessage3 $loadingColor $delay
 write-host ""
-Write-Host "Version:: 0.14" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 1.0" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
