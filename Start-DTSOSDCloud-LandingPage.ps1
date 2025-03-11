@@ -36,7 +36,7 @@ Write-Host $banner -ForegroundColor $loadingColor
 
 $loadingMessage1 = "Created by Dave Segura (@SeguraOSD)"
 $loadingMessage2 = "You may now remove your USB key"
-$loadingMessage3 = "NOTE: OSDCloud has not been tested with Field Devices such as Getac or Panasonic Tablets"
+$loadingMessage3 = "NOTE: OSDCloud has not been tested with Getac or Panasonic Tablets"
 $loadingColor = "White"
 $delay = 50  # Delay between each character in milliseconds
 
@@ -55,7 +55,7 @@ Type-Write $loadingMessage1 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the lines
 Type-Write $loadingMessage2 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the lines
-$delay = 5 # Speeds up the final message about Field devices
+$delay = 0 # Speeds up the final message about Field devices
 Type-Write $loadingMessage3 $loadingColor $delay
 write-host ""
 Write-Host "Version:: 1.0" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
