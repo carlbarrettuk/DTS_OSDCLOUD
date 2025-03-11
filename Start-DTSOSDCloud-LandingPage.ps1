@@ -38,7 +38,7 @@ $loadingMessage1 = "Created by Dave Segura (@SeguraOSD)"
 $loadingMessage2 = "You may now remove your USB key"
 $loadingMessage3 = "NOTE: OSDCloud has not been tested with Getac or Panasonic Tablets"
 $loadingColor = "White"
-$delay = 50  # Delay between each character in milliseconds
+$delay = 30  # Delay between each character in milliseconds
 
 # Function to simulate typing effect
 function Type-Write ($message, $color, $delay) {
