@@ -64,9 +64,11 @@ Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 11 | Enterprise   | En-gb" -ForegroundColor White
-Write-Host "2: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
-Write-Host "3: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
-Write-Host "4: Exit`n" -ForegroundColor Red
+Write-Host "2: Windows 11 | Enterprise   | da-DK" -ForegroundColor White
+Write-Host "3: Windows 11 | Enterprise   | de-DE" -ForegroundColor White
+Write-Host "4: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
+Write-Host "5: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
+Write-Host "6: Exit`n" -ForegroundColor Red
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -76,9 +78,12 @@ Write-Host ".................................................." -ForegroundColor
 switch ($EngineerInput)
 {
     '1' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '2' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
-    '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '4' { Exit		}
+    '2' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
+    '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
+    '4' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
+    '5' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '6' { Exit		}
 }
 
 wpeutil reboot
+
