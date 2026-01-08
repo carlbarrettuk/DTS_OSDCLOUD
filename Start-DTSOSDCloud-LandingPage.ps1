@@ -56,7 +56,7 @@ Type-Write $loadingMessage2 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the lines
 $delay = 0 # Speeds up the final message about Field devices
 write-host ""
-Write-Host "Version:: 1.5" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 1.4" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
@@ -75,7 +75,7 @@ Write-Host ".................................................." -ForegroundColor
 
 switch ($EngineerInput)
 {
-    '1' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '1' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
     '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
     '4' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
@@ -84,6 +84,7 @@ switch ($EngineerInput)
 }
 
 wpeutil reboot
+
 
 
 
