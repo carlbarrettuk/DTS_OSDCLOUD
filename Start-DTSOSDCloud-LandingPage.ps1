@@ -56,7 +56,7 @@ Type-Write $loadingMessage2 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the lines
 $delay = 0 # Speeds up the final message about Field devices
 write-host ""
-Write-Host "Version:: 1.4" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 1.5" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
@@ -84,6 +84,7 @@ switch ($EngineerInput)
 }
 
 wpeutil reboot
+
 
 
 
