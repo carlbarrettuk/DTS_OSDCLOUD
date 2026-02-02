@@ -76,16 +76,17 @@ Write-Host ".................................................." -ForegroundColor
 
 switch ($EngineerInput)
 {
-    '1' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '2' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
-    '3' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
-    '4' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
-    '5' { Start-OSDCloud -OSName "Windows 11 24H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '1' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '2' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
+    '3' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
+    '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
+    '5' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '6' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '7' { Exit		}
 }
 
 wpeutil reboot
+
 
 
 
