@@ -66,8 +66,7 @@ Write-Host "2: Windows 11 | Enterprise   | da-DK" -ForegroundColor White
 Write-Host "3: Windows 11 | Enterprise   | de-DE" -ForegroundColor White
 Write-Host "4: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
 Write-Host "5: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
-Write-Host "6: Windows 11 | TEST ONLY   | En-gb" -ForegroundColor White
-Write-Host "7: Exit`n" -ForegroundColor Red
+Write-Host "6: Exit`n" -ForegroundColor Red
 
 $EngineerInput = Read-Host "Please make a selection"
 
@@ -81,11 +80,11 @@ switch ($EngineerInput)
     '3' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
     '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
     '5' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '6' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '7' { Exit		}
+    '6' { Exit		}
 }
 
 wpeutil reboot
+
 
 
 
