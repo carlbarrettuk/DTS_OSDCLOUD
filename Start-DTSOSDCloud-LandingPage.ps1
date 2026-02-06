@@ -82,10 +82,11 @@ switch ($EngineerInput)
     '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
     '5' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '6' { Exit		}
-    '7' { $Global:MyOSDCloud.CheckSHA1 = $true; Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '7' { $Global:MyOSDCloud.CheckSHA1 = $true; Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
 }
 
 wpeutil reboot
+
 
 
 
