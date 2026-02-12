@@ -56,7 +56,7 @@ Type-Write $loadingMessage2 $loadingColor $delay
 Start-Sleep -Seconds 1  # Optional pause between the lines
 $delay = 0 # Speeds up the final message about Field devices
 write-host ""
-Write-Host "Version:: 1.5" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
+Write-Host "Version:: 1.6" -ForegroundColor Yellow # <<<<< Increment version information here when making changes
 
 Write-Host ""
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
@@ -64,9 +64,9 @@ Write-Host "=======================================================" -Foreground
 Write-Host "1: Windows 11 | Enterprise   | En-gb" -ForegroundColor White
 Write-Host "2: Windows 11 | Enterprise   | da-DK" -ForegroundColor White
 Write-Host "3: Windows 11 | Enterprise   | de-DE" -ForegroundColor White
-Write-Host "4: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
-Write-Host "5: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
-Write-Host "6: Exit`n" -ForegroundColor Red
+#Write-Host "4: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
+Write-Host "4: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
+Write-Host "5: Exit`n" -ForegroundColor Red
 #Write-Host "7: TESTING ONLY" -ForegroundColor White
 
 $EngineerInput = Read-Host "Please make a selection"
@@ -79,13 +79,14 @@ switch ($EngineerInput)
     '1' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
     '3' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
-    '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
-    '5' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '6' { Exit		}
+    #'4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
+    '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
+    '5' { Exit		}
     #'7' { $Global:MyOSDCloud.CheckSHA1 = $true; Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
 }
 
 wpeutil reboot
+
 
 
 
