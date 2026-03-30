@@ -64,9 +64,9 @@ Write-Host "=======================================================" -Foreground
 Write-Host "1: Windows 11 | Enterprise   | En-gb" -ForegroundColor White
 Write-Host "2: Windows 11 | Enterprise   | da-DK" -ForegroundColor White
 Write-Host "3: Windows 11 | Enterprise   | de-DE" -ForegroundColor White
-#Write-Host "4: Windows 11 | Enterprise   | hu-HU" -ForegroundColor White
 Write-Host "4: Windows 11 | Professional | Device Recycling Only" -ForegroundColor White
-Write-Host "5: Exit`n" -ForegroundColor Red
+Write-Host "5: Windows 11 | Professional | Denmark Device Recycling Only" -ForegroundColor White
+Write-Host "6: Exit`n" -ForegroundColor Red
 #Write-Host "7: TESTING ONLY" -ForegroundColor White
 
 $EngineerInput = Read-Host "Please make a selection"
@@ -79,9 +79,9 @@ switch ($EngineerInput)
     '1' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
     '2' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage da-DK }
     '3' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage de-DE }
-    #'4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage hu-HU }
     '4' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage $OSLanguage }
-    '5' { Exit		}
+    '5' { Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition Pro -OSActivation $OSActivation -OSLanguage da-DK }
+    '6' { Exit		}
     #'7' { $Global:MyOSDCloud.CheckSHA1 = $true; Start-OSDCloud -OSName "Windows 11 25H2 x64" -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage }
 }
 
